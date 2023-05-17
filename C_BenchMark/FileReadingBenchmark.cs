@@ -36,11 +36,38 @@ public class FileReadingBenchmark
     }
 
     [Benchmark]
+    public void StreamReaderReadBlock()
+    {
+        using (StreamReader reader = new StreamReader(filePath))
+        {
+            char[] buffer = new char[1024];
+            int numRead;
+            while ((numRead = reader.ReadBlock(buffer, 0, buffer.Length)) > 0)
+            {
+                // Do something with the chunk of characters
+            }
+        }
+    }
+
+    [Benchmark]
     public void ReadLines()
     {
         foreach (string line in File.ReadLines(filePath))
         {
             //
         }
+    }
+
+    [Benchmark]
+    public void ReadParallel()
+    {
+        Parallel.ForEach(
+            File.ReadLines(filePath), //returns IEumberable<string>: lazy-loading
+            new ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount },
+            (line, state, index) =>
+            {
+                //              
+            }
+        );
     }
 }

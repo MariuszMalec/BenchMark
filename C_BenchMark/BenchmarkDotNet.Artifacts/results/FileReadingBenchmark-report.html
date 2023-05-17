@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>FileReadingBenchmark-20230515-230535</title>
+<title>FileReadingBenchmark-20230517-213828</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -22,12 +22,14 @@ Intel Pentium CPU B960 2.20GHz, 1 CPU, 2 logical and 2 physical cores
 <pre><code></code></pre>
 
 <table>
-<thead><tr><th>Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Median</th><th>Rank</th><th>Gen0</th><th>Gen1</th><th>Allocated</th>
+<thead><tr><th>         Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Rank</th><th>Gen0</th><th>Gen1</th><th>Allocated</th>
 </tr>
-</thead><tbody><tr><td>ReadAllText</td><td>59.00 &mu;s</td><td>0.341 &mu;s</td><td>0.302 &mu;s</td><td>58.85 &mu;s</td><td>1</td><td>90.8203</td><td>-</td><td>93.52 KB</td>
-</tr><tr><td>StreamReader</td><td>115.38 &mu;s</td><td>0.488 &mu;s</td><td>0.432 &mu;s</td><td>115.27 &mu;s</td><td>2</td><td>65.4297</td><td>-</td><td>66.88 KB</td>
-</tr><tr><td>ReadLines</td><td>126.63 &mu;s</td><td>2.474 &mu;s</td><td>3.703 &mu;s</td><td>124.68 &mu;s</td><td>3</td><td>65.4297</td><td>-</td><td>66.93 KB</td>
-</tr><tr><td>ReadAllLines</td><td>136.37 &mu;s</td><td>1.746 &mu;s</td><td>1.793 &mu;s</td><td>135.74 &mu;s</td><td>4</td><td>86.4258</td><td>0.2441</td><td>88.83 KB</td>
+</thead><tbody><tr><td>StreamReaderReadBlock</td><td>32.37 &mu;s</td><td>0.117 &mu;s</td><td>0.109 &mu;s</td><td>1</td><td>9.2163</td><td>-</td><td>9.46 KB</td>
+</tr><tr><td>ReadAllText</td><td>57.25 &mu;s</td><td>0.135 &mu;s</td><td>0.112 &mu;s</td><td>2</td><td>90.8813</td><td>-</td><td>93.52 KB</td>
+</tr><tr><td>StreamReader</td><td>114.45 &mu;s</td><td>0.475 &mu;s</td><td>0.421 &mu;s</td><td>3</td><td>65.4297</td><td>-</td><td>66.88 KB</td>
+</tr><tr><td>ReadLines</td><td>123.27 &mu;s</td><td>0.297 &mu;s</td><td>0.263 &mu;s</td><td>4</td><td>65.4297</td><td>-</td><td>66.93 KB</td>
+</tr><tr><td>ReadAllLines</td><td>132.28 &mu;s</td><td>0.319 &mu;s</td><td>0.266 &mu;s</td><td>5</td><td>86.4258</td><td>0.2441</td><td>88.83 KB</td>
+</tr><tr><td>ReadParallel</td><td>236.59 &mu;s</td><td>4.635 &mu;s</td><td>5.862 &mu;s</td><td>6</td><td>70.8008</td><td>-</td><td>71.89 KB</td>
 </tr></tbody></table>
 </body>
 </html>
