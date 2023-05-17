@@ -2,10 +2,13 @@
 using System.Text;
 using BenchmarkDotNet.Running;
 
-string textFile = @"/home/mario/repo/P_PythonEducation/Source/B011382_33N.SPF";
+//start benchmark
+//dotnet run -p C_BenchMark.csproj -c Release
+var results = BenchmarkRunner.Run<FileReadingBenchmark>();
 
-Stopwatch watch = new Stopwatch();
-
+//TESTS
+//string textFile = @"/home/mario/repo/P_PythonEducation/Source/B011382_33N.SPF";
+//Stopwatch watch = new Stopwatch();
 // watch.Start();
 //    if (File.Exists(textFile)) {
 //     // Read entire text file content in one string
@@ -144,5 +147,3 @@ Stopwatch watch = new Stopwatch();
 // }
 // watch.Stop();
 // Console.WriteLine(watch.Elapsed.TotalSeconds.ToString());
-
-var results = BenchmarkRunner.Run<FileReadingBenchmark>();
