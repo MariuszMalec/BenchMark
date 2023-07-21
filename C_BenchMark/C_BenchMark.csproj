@@ -11,4 +11,14 @@
     <PackageReference Include="BenchmarkDotNet" Version="0.13.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Source\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Source\1406149.SPF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
